@@ -1,41 +1,54 @@
 # EscapeRoom
-#  LOCKDOWN — AI-Powered Escape Room
+# LOCKDOWN — AI-Powered Escape Room
 > **A sophisticated simulation demonstrating competitive AI search strategies through high-stakes logical challenges.**
 
 ---
 
-##  Game Rooms & AI Intelligence
-
-###  Room 1: Color Sort Protocol
-* **The Mission:** Sort disorganized colored balls into matching tubes.
-* **AI Showdown:**
-    * **Agent 1 (Greedy Best-First Search):** Prioritizes moves based on local entropy and immediate tube alignment to reduce disorganization quickly.
-    * **Agent 2 (A* Search):** Calculates the optimal sequence by evaluating the total distance of all colors to their target tubes, ensuring the most efficient path.
-
-###  Room 2: Mastermind Cipher
-* **The Mission:** Decipher a hidden 4-digit code using logic and feedback.
-* **AI Showdown:**
-    * **Agent 1 (CBRS):** Selects candidates that satisfy constraints from previous feedback, pruning the search space by eliminating impossible combinations.
-    * **Agent 2 (Minimax):** Implements Knuth’s strategy to evaluate the "worst-case" scenario for every potential guess, systematically narrowing down the correct code.
-
-###  Room 3: Crate Maze (Grid Pathfinding)
-* **The Mission:** Navigate a grid to find a hidden key within crates while avoiding obstacles.
-* **AI Showdown:**
-    * **Agent 1 (Breadth-First Search - BFS):** Performs an exhaustive scan of the grid to guarantee the shortest path, regardless of map complexity.
-    * **Agent 2 (A* Search):** Utilizes ** Manhattan Distance** heuristics to "aim" toward the target, significantly reducing the number of nodes explored compared to BFS.
-
-### Room 4: 8-Puzzle Cipher (The Final Challenge)
-* **The Mission:** Solve the classic 3x3 sliding tile puzzle to reach the goal state.
-* **AI Showdown:**
-    * **Agent 1 (A* Search):** Employs standard Manhattan distance heuristics to guide tiles toward their goal positions.
-    * **Agent 2 (IDA* - Iterative Deepening A*):** Uses an advanced **"Linear Conflict"** heuristic. This tighter estimation prunes unnecessary branches, solving complex configurations faster than standard A*.
+##  Table of Contents
+*  [About the Project](#-about-the-project).
+* [ Game Chambers & AI Logic](#-about-the-project)
+* [ Technical Stack](#-technical-stack)
+* [ Credits](#-credits)
 
 ---
 
-##  Technical Implementation
-* **Core Language:** `Python 3.10+`
-* **Graphics Engine:** `Pygame`
-* **Visual Aesthetics:** Dark Industrial / Silver Network Theme with real-time AI "Frontier" and "Path" visualization.
+##  About the Project
+**LOCKDOWN** is an immersive technical challenge. You aren't just playing; you are competing against two distinct **AI Agents** to see who can escape first. This project visualizes how different algorithms "think", "prune", and "search" in real-time.
+
+---
+
+##  Game Chambers & AI Logic
+
+###  Room 1: Color Sort Protocol
+| Agent | Algorithm | Strategy |
+| :--- | :--- | :--- |
+| **Agent 1** | **Greedy BFS** | Prioritizes moves based on local entropy and immediate tube alignment. |
+| **Agent 2** | **A* Search** | Evaluates the total distance of all colors to target tubes for the **most efficient path**. |
+
+###  Room 2: Mastermind Cipher
+| Agent | Algorithm | Strategy |
+| :--- | :--- | :--- |
+| **Agent 1** | **CBRS** | Prunes the search space by eliminating impossible combinations based on feedback. |
+| **Agent 2** | **Minimax** | Implements **Knuth’s strategy** to solve the code by evaluating "worst-case" scenarios. |
+
+###  Room 3: Crate Maze (Pathfinding)
+| Agent | Algorithm | Strategy |
+| :--- | :--- | :--- |
+| **Agent 1** | **BFS** | Performs an exhaustive scan to **guarantee the shortest path** in any map. |
+| **Agent 2** | **A* Search** | Uses **Manhattan Distance** heuristics to "aim" toward the target, reducing explored nodes. |
+
+###  Room 4: 8-Puzzle Cipher
+| Agent | Algorithm | Strategy |
+| :--- | :--- | :--- |
+| **Agent 1** | **A* Search** | Employs standard Manhattan distance heuristics to guide tiles to their goals. |
+| **Agent 2** | **IDA*** | Uses **Linear Conflict** heuristics to prune branches and solve complex states faster. |
+
+---
+
+##  Technical Stack
+* **Language:** `Python 3.10+`
+* **Library:** `Pygame`
+* **Visuals:** Dark Industrial / Silver Network Theme with real-time AI path visualization.
 
 ---
 
