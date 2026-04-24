@@ -410,12 +410,12 @@ def make_sort_puzzle():
     for _ in range(2000):
         balls = []
         for c in SORT_COLORS:
-            balls.extend([c]*TUBE_CAP)
+            balls.extend([c] * TUBE_CAP)
         random.shuffle(balls)
-        tubes = [list(balls[i*TUBE_CAP:(i+1)*TUBE_CAP])
-                 for i in range(SORT_TUBES-1)]
+        tubes = [list(balls[i * TUBE_CAP:(i + 1) * TUBE_CAP])
+                 for i in range(SORT_TUBES - 1)]
         tubes.append([])
-        if not sort_solved(tubes) and greedy_sort(tubes) is not None:
+        if not sort_solved(tubes) and bool(astar_sort(tubes)):
             return tubes
     return tubes
 
@@ -477,7 +477,7 @@ def bfs_path(start, goal, obstacles, gs=GRID_SIZE):
     return []
 
 
-# ── PATCHED: astar_path now returns (path, nodes_explored, frontier_cells) ───
+# astar_path returns (path, nodes_explored, frontier_cells) ───
 # This mirrors what _ai1_bfs provides for BFS so Agent 2's Room 3 can show
 # the same green "explored nodes" overlay that Agent 1 already displays.
 def astar_path(start, goal, obstacles, gs=GRID_SIZE):
