@@ -86,7 +86,6 @@ def p8_make_puzzle():
 
 
 def p8_neighbors(state):
-    """Return list of (move_dir_label, new_state) from state."""
     idx = state.index(0)
     r, c = divmod(idx, 3)
     result = []
